@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option go_package = "./proto";
+
+import "google/protobuf/empty.proto";
+package shop.v1;
+
+service ShopService {
+  rpc GetAll (google.protobuf.Empty) returns (ItemsList) {}
+  rpc Get (ItemRequestId) returns (Item) {}
+  rpc Create (CreateItemRequest) returns (Item) {}
+  rpc Update (Item) returns (Item) {}
+  rpc Remove (ItemRequestId) returns (google.protobuf.Empty) {}
+}
+
+message CreateItemRequest {
+  string name = 2;
+  float price = 3;
+}
+
+message Item {
+  string id = 1;
+  string name = 2;
+  float price = 3;
+}
+
+message ItemsList {
+  repeated Item items = 1;
+}
+
+message ItemRequestId {
+  string id = 1;
+}
