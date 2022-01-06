@@ -1,9 +1,6 @@
 # go-grpc-server-shop
 Simple gRPC server written in GO with simple shop like CRUD API
 
-## TODO
-tests for repo, service, grpc server
-
 ## Proto GO files generation
 Requires <i>protoc</i> to be installed:
 ```shell
