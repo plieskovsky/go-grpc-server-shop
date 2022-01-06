@@ -28,21 +28,21 @@ curl 127.0.0.1:8079/metrics
 ```
 Create
 ```
-grpcurl -d '{"name":"name-1", "price":45}' -cert hack/client-cert.pem -key hack/client-key.pem -cacert hack/ca-cert.pem localhost:8443 shop.v1.ShopService/Create
+grpcurl -d '{"name":"name-1", "price":45}' -cert test-certs/client-cert.pem -key test-certs/client-key.pem -cacert test-certs/ca-cert.pem localhost:8443 shop.v1.ShopService/Create
 ```
 Get
 ```
-grpcurl -d '{"id":"<ID>"}' -cert hack/client-cert.pem -key hack/client-key.pem -cacert hack/ca-cert.pem localhost:8443 shop.v1.ShopService/Get
+grpcurl -d '{"id":"<ID>"}' -cert test-certs/client-cert.pem -key test-certs/client-key.pem -cacert test-certs/ca-cert.pem localhost:8443 shop.v1.ShopService/Get
 ```
 Update
 ```
-grpcurl -d '{"id":"<ID>", "name":"name-updated", "price":100.15}' -cert hack/client-cert.pem -key hack/client-key.pem -cacert hack/ca-cert.pem localhost:8443 shop.v1.ShopService/Update
+grpcurl -d '{"id":"<ID>", "name":"name-updated", "price":100.15}' -cert test-certs/client-cert.pem -key test-certs/client-key.pem -cacert test-certs/ca-cert.pem localhost:8443 shop.v1.ShopService/Update
 ```
 Get all
 ```
-grpcurl -d '{}' -cert hack/client-cert.pem -key hack/client-key.pem -cacert hack/ca-cert.pem localhost:8443 shop.v1.ShopService/GetAll
+grpcurl -d '{}' -cert test-certs/client-cert.pem -key test-certs/client-key.pem -cacert test-certs/ca-cert.pem localhost:8443 shop.v1.ShopService/GetAll
 ```
 Remove
 ```
-grpcurl -d '{"id":"<ID>"}' -cert hack/client-cert.pem -key hack/client-key.pem -cacert hack/ca-cert.pem localhost:8443 shop.v1.ShopService/Remove
+grpcurl -d '{"id":"<ID>"}' -cert test-certs/client-cert.pem -key test-certs/client-key.pem -cacert test-certs/ca-cert.pem localhost:8443 shop.v1.ShopService/Remove
 ```

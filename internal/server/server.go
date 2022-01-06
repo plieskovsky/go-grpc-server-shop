@@ -32,9 +32,9 @@ type Config struct {
 // DefaultConfig default gRPC server options.
 var DefaultConfig = Config{
 	Address:              "localhost:8443",
-	CertFilename:         "hack/server-cert.pem",
-	KeyFilename:          "hack/server-key.pem",
-	ClientCACert:         "hack/ca-cert.pem",
+	CertFilename:         "test-certs/server-cert.pem",
+	KeyFilename:          "test-certs/server-key.pem",
+	ClientCACert:         "test-certs/ca-cert.pem",
 	ReflectionAPIEnabled: true,
 	TraceEnabled:         false,
 }

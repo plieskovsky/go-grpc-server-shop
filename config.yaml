@@ -1,7 +1,7 @@
 server:
   grpc:
     address: localhost:8443
-    certFilename: hack/server-cert.pem
-    keyFilename: hack/server-key.pem
-    clientCACert: hack/ca-cert.pem
+    certFilename: test-certs/server-cert.pem
+    keyFilename: test-certs/server-key.pem
+    clientCACert: test-certs/ca-cert.pem
     reflectionApiEnabled: true
